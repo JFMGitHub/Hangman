@@ -1,0 +1,22 @@
+{
+  "name": "hangman",
+  "version": "1.0.0",
+  "description": "Hangman game",
+  "main": "Hangman.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JFMGitHub/Hangman.git"
+  },
+  "author": "John Mellet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JFMGitHub/Hangman/issues"
+  },
+  "homepage": "https://github.com/JFMGitHub/Hangman#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
