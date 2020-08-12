@@ -34,11 +34,11 @@ while (i < randWord.length + 7) {
     } else if (wrongGuesses === 4) {
       console.log("  O  \n  |/ \n  |  ");
     } else if (wrongGuesses === 5) {
-      console.log("  O  \n  |/ \n  |  ");
+      console.log("  O  \n \\|/ \n  |  ");
     } else if (wrongGuesses === 6) {
-      console.log("  O  \n  |/ \n  |  \n / ");
+      console.log("  O  \n \\|/ \n  |  \n / ");
     } else {
-      console.log("  O  \n  |/ \n  |  \n /  ");
+      console.log("  O  \n \\|/ \n  |  \n / \\");
     }
   }
   if (randWord.length === correctGuesses) {
