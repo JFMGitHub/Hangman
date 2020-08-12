@@ -11,42 +11,42 @@ let randWord = wordBank[Math.floor(Math.random() * wordBank.length)];
 let i = 0;
 while (i < randWord.length + 7) {
   i++;
-  const letter = prompt.question("Please guess a letter: ");
-  function fillGuessBar() {
-    if ((i = 1)) {
-      for (let j = 0; j < randWord.length; j++) {
-        guessBar.push("_");
-      }
+  if (i === 1) {
+    for (let j = 0; j < randWord.length; j++) {
+      guessBar.push("_");
     }
-    console.log(guessBar);
   }
-  fillGuessBar();
+  console.log(guessBar);
+  const letter = prompt.question("Please guess a letter: ");
+
   if (randWord.includes(letter)) {
     const charIndex = randWord.indexOf(letter);
     guessBar[charIndex] = letter;
     correctGuesses++;
   } else {
     wrongGuesses++;
-    if ((wrongGuesses = 1)) {
+    if (wrongGuesses === 1) {
       console.log("  O  ");
-    } else if ((wrongGuesses = 2)) {
+    } else if (wrongGuesses === 2) {
       console.log("  O  \n  |  ");
-    } else if ((wrongGuesses = 3)) {
+    } else if (wrongGuesses === 3) {
       console.log("  O  \n  |  \n  |  ");
-    } else if ((wrongGuesses = 4)) {
-      console.log("  O  \n |/  \n  |  ");
-    } else if ((wrongGuesses = 5)) {
-      console.log("  O  \n |/ \n  |  ");
-    } else if ((wrongGuesses = 6)) {
-      console.log("  O  \n |/ \n  |  \n / ");
+    } else if (wrongGuesses === 4) {
+      console.log("  O  \n  |/ \n  |  ");
+    } else if (wrongGuesses === 5) {
+      console.log("  O  \n  |/ \n  |  ");
+    } else if (wrongGuesses === 6) {
+      console.log("  O  \n  |/ \n  |  \n / ");
     } else {
-      console.log("  O  \n |/  \n  |  \n /  ");
+      console.log("  O  \n  |/ \n  |  \n /  ");
     }
   }
   if (randWord.length === correctGuesses) {
     gamesWon++;
     gamesPlayed++;
-    console.log(`You won the game! \n${gamesWon} out of ${gamesPlayed} won!`);
+    console.log(
+      `You won the game! \nThe word was ${randWord}! \n${gamesWon} out of ${gamesPlayed} won!`
+    );
     break;
   } else if (wrongGuesses === 7) {
     gamesPlayed++;
@@ -55,8 +55,9 @@ while (i < randWord.length + 7) {
   } else {
     console.log("Guess again!");
   }
-  console.log(wrongGuesses);
-  console.log(correctGuesses);
-  console.log(i);
+
+  console.log(wrongGuesses, "wrongGuesses");
+  console.log(correctGuesses, "correctGuesses");
+  console.log(i, "i");
 }
 //}
