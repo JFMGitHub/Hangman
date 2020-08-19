@@ -4,6 +4,7 @@ console.log("\nWelcome to Hangman!\nPress ctrl+c to stop\n");
 
 let wrongGuesses = 0;
 let correctGuesses = 0;
+let charsGuessed = [];
 let gamesPlayed = 0;
 let gamesWon = 0;
 let guessBar = [];
@@ -18,7 +19,8 @@ while (i < randWord.length + 7) {
   }
   console.log(guessBar);
   const letter = prompt.question("Please guess a letter: ");
-
+  charsGuessed.push(letter);
+  console.log(charsGuessed, "Characters Guessed");
   if (randWord.includes(letter)) {
     const charIndex = randWord.indexOf(letter);
     guessBar[charIndex] = letter;
@@ -56,8 +58,8 @@ while (i < randWord.length + 7) {
     console.log("Guess again!");
   }
 
-  console.log(wrongGuesses, "wrongGuesses");
-  console.log(correctGuesses, "correctGuesses");
-  console.log(i, "i");
+  //console.log(wrongGuesses, "wrongGuesses");
+  //console.log(correctGuesses, "correctGuesses");
+  //console.log(i, "i");
 }
 //}
