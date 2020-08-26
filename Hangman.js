@@ -57,9 +57,4 @@ while (i < randWord.length + 7) {
   } else {
     console.log("Guess again!");
   }
-
-  //console.log(wrongGuesses, "wrongGuesses");
-  //console.log(correctGuesses, "correctGuesses");
-  //console.log(i, "i");
 }
-//}
